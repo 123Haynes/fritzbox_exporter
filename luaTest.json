@@ -1,0 +1,42 @@
+[
+    {
+        "path": "data.lua",
+        "params": "page=overview"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dslOv"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dectMon"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=netDev"
+    },
+   {
+        "path": "data.lua",
+        "params": "page=usbOv"
+    },
+     {
+        "path": "data.lua",
+        "params": "page=sh_dev"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=energy"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=ecoStat"
+    },
+    {
+        "path": "GET:webservices/homeautoswitch.lua",
+        "params": "switchcmd=getdevicelistinfos"
+    }, 
+    {
+        "path": "GET:webservices/homeautoswitch.lua",
+        "params": "switchcmd=getbasicdevicestats"
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "path": "data.lua",
+        "params": "page=overview"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=ipv6"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dnsSrv"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=kidLis"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=trafapp"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=portoverview"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dslOv"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dialLi"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=bookLi"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dectSet"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dectMon"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=homeNet"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=netDev"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=netSet"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=usbOv"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=mServSet"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=wSet"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=chan"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=sh_dev"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=energy"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=ecoStat"
+    },
+    {
+        "path": "GET:internet/inetstat_monitor.lua",
+        "params": "action=get_graphic&useajax=1"
+    },
+    {
+        "path": "GET:internet/internet_settings.lua",
+        "params": "multiwan_page=dsl&useajax=1"
+    },
+    {
+        "path": "GET:internet/dsl_stats_tab.lua",
+        "params": "update=mainDiv&useajax=1"
+    },
+    {
+        "path": "GET:net/network.lua",
+        "params": "useajax=1"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=netCnt"
+    },
+    {
+        "path": "data.lua",
+        "params": "page=dslStat"
+    }
+]

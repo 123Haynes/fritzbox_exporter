@@ -1,0 +1,329 @@
+{
+    "labelRenames": [
+        {
+            "matchRegex": "64QAM",
+            "renameLabel": "64"
+        },
+        {
+            "matchRegex": "16QAM",
+            "renameLabel": "16"
+        },
+        {
+            "matchRegex": "4096QAM",
+            "renameLabel": "4096"
+        },
+        {
+            "matchRegex": "256QAM",
+            "renameLabel": "256"
+        },
+        {
+            "matchRegex": "(?i)prozessor",
+            "renameLabel": "CPU"
+        },
+        {
+            "matchRegex": "(?i)system",
+            "renameLabel": "System"
+        },
+        {
+            "matchRegex": "(?i)DSL",
+            "renameLabel": "DSL"
+        },
+        {
+            "matchRegex": "(?i)FON",
+            "renameLabel": "Phone"
+        },
+        {
+            "matchRegex": "(?i)WLAN",
+            "renameLabel": "WLAN"
+        },
+        {
+            "matchRegex": "(?i)USB",
+            "renameLabel": "USB"
+        },
+        {
+            "matchRegex": "(?i)Speicher.*FRITZ",
+            "renameLabel": "Internal eStorage"
+        }
+    ],
+    "metrics": [
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelUs.docsis30.*",
+            "resultKey": "powerLevel",
+            "promDesc": {
+                "fqName": "gateway_cable_power_upstream",
+                "help": "docsis 3.0 power upstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelUs.docsis30.*",
+            "resultKey": "modulation",
+            "promDesc": {
+                "fqName": "gateway_cable_modulation_upstream",
+                "help": "docsis 3.0 modulation upstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelUs.docsis31.*",
+            "resultKey": "powerLevel",
+            "promDesc": {
+                "fqName": "gateway_cable_power_upstream31",
+                "help": "docsis 3.1 power upstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelDs.docsis30.*",
+            "resultKey": "corrErrors",
+            "promDesc": {
+                "fqName": "gateway_cable_correctables_downstream",
+                "help": "docsis 3.0 correctable errors dpwnstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelDs.docsis30.*",
+            "resultKey": "nonCorrErrors",
+            "promDesc": {
+                "fqName": "gateway_cable_uncorrectables_downstream",
+                "help": "docsis 3.0 uncorrectable errors downstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelDs.docsis30.*",
+            "resultKey": "mse",
+            "promDesc": {
+                "fqName": "gateway_cable_mse_downstream",
+                "help": "docsis 3.0 mse downstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelDs.docsis30.*",
+            "resultKey": "powerLevel",
+            "promDesc": {
+                "fqName": "gateway_cable_power_downstream",
+                "help": "docsis 3.0 powerlevel downstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=docInfo",
+            "resultPath": "data.channelDs.docsis31.*",
+            "resultKey": "powerLevel",
+            "promDesc": {
+                "fqName": "gateway_cable_power_downstream31",
+                "help": "docsis 3.1 powerlevel downstream from data.lua?page=docInfo",
+                "varLabels": [
+                    "gateway",
+                    "frequency"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=energy",
+            "resultPath": "data.drain.*",
+            "resultKey": "actPerc",
+            "promDesc": {
+                "fqName": "gateway_data_energy_consumption",
+                "help": "percentage of energy consumed from data.lua?page=energy",
+                "varLabels": [
+                    "gateway",
+                    "name"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=energy",
+            "resultPath": "data.drain.*.lan.*",
+            "resultKey": "class",
+            "okValue": "green",
+            "promDesc": {
+                "fqName": "gateway_data_energy_lan_status",
+                "help": "status of LAN connection from data.lua?page=energy (1 = up)",
+                "varLabels": [
+                    "gateway",
+                    "name"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=ecoStat",
+            "resultPath": "data.cputemp.series.0",
+            "resultKey": "-1",
+            "promDesc": {
+                "fqName": "gateway_data_ecostat_cputemp",
+                "help": "cpu temperature from data.lua?page=ecoStat",
+                "varLabels": [
+                    "gateway"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=ecoStat",
+            "resultPath": "data.cpuutil.series.0",
+            "resultKey": "-1",
+            "promDesc": {
+                "fqName": "gateway_data_ecostat_cpuutil",
+                "help": "percentage of cpu utilization from data.lua?page=ecoStat",
+                "varLabels": [
+                    "gateway"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=ecoStat",
+            "resultPath": "data.ramusage.series.0",
+            "resultKey": "-1",
+            "promDesc": {
+                "fqName": "gateway_data_ecostat_ramusage",
+                "help": "percentage of RAM utilization from data.lua?page=energy",
+                "varLabels": [
+                    "gateway"
+                ],
+                "fixedLabels": {
+                    "ram_type": "Fixed"
+                }
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=ecoStat",
+            "resultPath": "data.ramusage.series.1",
+            "resultKey": "-1",
+            "promDesc": {
+                "fqName": "gateway_data_ecostat_ramusage",
+                "help": "percentage of RAM utilization from data.lua?page=energy",
+                "varLabels": [
+                    "gateway"
+                ],
+                "fixedLabels": {
+                    "ram_type": "Dynamic"
+                }
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=ecoStat",
+            "resultPath": "data.ramusage.series.2",
+            "resultKey": "-1",
+            "promDesc": {
+                "fqName": "gateway_data_ecostat_ramusage",
+                "help": "percentage of RAM utilization from data.lua?page=energy",
+                "varLabels": [
+                    "gateway"
+                ],
+                "fixedLabels": {
+                    "ram_type": "Free"
+                }
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=usbOv",
+            "resultPath": "data.usbOverview.devices.*",
+            "resultKey": "partitions.0.totalStorageInBytes",
+            "promDesc": {
+                "fqName": "gateway_data_usb_storage_total",
+                "help": "total storage in bytes from data.lua?page=usbOv",
+                "varLabels": [
+                    "gateway",
+                    "deviceType",
+                    "deviceName"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        },
+        {
+            "path": "data.lua",
+            "params": "page=usbOv",
+            "resultPath": "data.usbOverview.devices.*",
+            "resultKey": "partitions.0.usedStorageInBytes",
+            "promDesc": {
+                "fqName": "gateway_data_usb_storage_used",
+                "help": "used storage in bytes from data.lua?page=usbOv",
+                "varLabels": [
+                    "gateway",
+                    "deviceType",
+                    "deviceName"
+                ]
+            },
+            "promType": "GaugeValue",
+            "cacheEntryTTL": 300
+        }
+    ]
+}
